@@ -27,6 +27,10 @@ function setPlayerNotice(message) {
   playerMessage.textContent = translateText(message);
 }
 
+function trackFilename(button) {
+  return button.dataset.track + "-" + mode + ".mp3";
+}
+
 function showTrack() {
   const button = playlist[trackIndex];
   for (const item of playlist) item.removeAttribute("aria-current");
@@ -37,7 +41,7 @@ function showTrack() {
   player.setAttribute("aria-label", button.textContent + " · " + label);
   trackBack.disabled = trackIndex === 0;
   trackForward.disabled = trackIndex === playlist.length - 1;
-  return "media/ost/" + button.dataset.track + "-" + mode + ".mp3";
+  return "media/ost/" + trackFilename(button);
 }
 
 function selectTrack(index, autoplay) {
@@ -52,13 +56,31 @@ function selectTrack(index, autoplay) {
   }
 }
 
-playlist.forEach((button, index) => {
+const trackDownloads = playlist.map((button, index) => {
   button.addEventListener("click", () => selectTrack(index, true));
+  const link = document.createElement("a");
+  link.className = "track-download";
+  button.after(link);
+  return { button, link };
 });
+
+function updateTrackDownloads() {
+  const label = translateText("Descargar");
+  const version = mode === "epic" ? "Epic" : "Chiptune";
+  for (const { button, link } of trackDownloads) {
+    link.download = trackFilename(button);
+    link.href = "media/ost/" + link.download;
+    link.textContent = label;
+    link.setAttribute("aria-label", label + " · " + button.textContent.trim() + " · " + version);
+  }
+}
+updateTrackDownloads();
+
 for (const input of library.querySelectorAll("[name=music-mode]")) {
   input.addEventListener("change", () => {
     const wasPlaying = !player.paused && !player.ended;
     mode = input.value;
+    updateTrackDownloads();
     selectTrack(trackIndex, wasPlaying);
   });
 }
@@ -139,6 +161,7 @@ playerSteps.hidden = false;
 showTrack();
 document.addEventListener("xilotron-language-change", () => {
   showTrack();
+  updateTrackDownloads();
   setPlayerNotice(playerNotice);
 });
 
