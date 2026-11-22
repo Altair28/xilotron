@@ -177,8 +177,20 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-height, 100px
 .localization h2 { font-size: clamp(2.5rem, 5.1vw, 4.85rem); }
 .languages { list-style: none; display: flex; flex-wrap: wrap; gap: .55rem; padding: 0; margin: 0; }
 .languages li { border: 1px solid var(--line); border-radius: 100px; padding: .45rem .8rem; background: #151422; }
-.chiquito { margin-top: 1.25rem; padding: .1rem 0 .1rem 1rem; border-left: 2px solid #d0a6ff; }
+.chiquito {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(86px, 27%, 150px);
+  align-items: center;
+  gap: .6rem;
+  margin-top: 1.25rem;
+  padding: .6rem .5rem .6rem 1rem;
+  border-left: 2px solid #d0a6ff;
+  border-radius: 0 .55rem .55rem 0;
+  background: radial-gradient(ellipse at 90% 66%, #433252 0%, #20192b 36%, #151421 77%);
+}
 .chiquito p { margin-top: .45rem; color: var(--muted); }
+.chiquito-portrait { display: block; border-radius: .4rem; }
+.chiquito-portrait img { width: 100%; height: auto; filter: drop-shadow(0 5px 12px #080612b0); }
 
 .film { --film-accent: #ffc1cc; isolation: isolate; position: relative; overflow: hidden; border-block: 1px solid #493348; background: #120e1c; }
 .film::before, .film::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
