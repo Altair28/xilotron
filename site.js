@@ -240,16 +240,9 @@ const isAppleMobile = /iPhone|iPad|iPod/i.test(userAgent) ||
   (/Macintosh/i.test(userAgent) && navigator.maxTouchPoints > 1);
 
 if (isAndroid || isAppleMobile) {
-  const supportsAndroidIntent = isAndroid && /Chrome\//i.test(userAgent) && !/; wv\)/i.test(userAgent);
   for (const link of teaserLinks) {
-    // Let the browser handle a direct tap so mobile OS link routing can open the app.
+    // Keep the HTTPS link so users can always reach YouTube if the OS stays in the browser.
     link.removeAttribute("target");
-    if (supportsAndroidIntent) {
-      const videoUrl = new URL(link.href);
-      link.href = "intent://" + videoUrl.host + videoUrl.pathname + videoUrl.search +
-        "#Intent;scheme=https;package=com.google.android.youtube;S.browser_fallback_url=" +
-        encodeURIComponent(videoUrl.href) + ";end";
-    }
   }
 } else if (typeof dialog.showModal === "function") {
   for (const link of teaserLinks) {
