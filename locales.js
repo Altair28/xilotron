@@ -114,6 +114,8 @@ Reproductor de la banda sonora|Soundtrack player|Lecteur de la bande-son|Lettore
 Escuchar el tema del menú|Listen to the menu theme|Écouter le thème du menu|Ascolta il tema del menu|Menüthema anhören|DuHmey QoQ yI'Ij|Lasto lind i gilith
 Modo de música|Music mode|Mode musical|Modalità musicale|Musikmodus|QoQ DuH|Cilith lind
 Descargar|Download|Télécharger|Scarica|Herunterladen|yISuq|Cabo
+Autor original:|Original author:|Auteur d’origine :|Autore originale:|Originalurheber:|qonwI' wa'DIch:|Bennethor eden:
+Cover de Suno|Cover by Suno|Reprise par Suno|Cover di Suno|Cover von Suno|Suno QoQ chenqa'moH|Lind adchant o Suno
 Menú y partida|Menu and gameplay|Menu et partie|Menu e partita|Menü und Spiel|DuHmey Quj je|Cilith a deliach
 Fase 1|Stage 1|Niveau 1|Fase 1|Level 1|mIch wa'|Rann 1
 Fase 2|Stage 2|Niveau 2|Fase 2|Level 2|mIch cha'|Rann 2

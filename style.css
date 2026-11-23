@@ -347,13 +347,14 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-height, 100px
 .track-group + .track-group { margin-top: 1.2rem; }
 .track-group h3 { font-size: 1rem; color: #cfd9e6; padding: 0 .55rem .35rem; }
 .track-group ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid #273448; }
-.track-group li { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .35rem; border-bottom: 1px solid #273448; }
-.track-group button { display: flex; gap: .7rem; align-items: center; text-align: left; width: 100%; min-height: 48px; padding: .55rem .65rem; border: 0; border-radius: .2rem; background: transparent; color: var(--text); cursor: pointer; font: inherit; }
+.track-group li { display: grid; grid-template: "play download" auto "credit download" auto / minmax(0, 1fr) auto; align-items: center; column-gap: .35rem; padding-bottom: .5rem; border-bottom: 1px solid #273448; }
+.track-group button { grid-area: play; display: flex; gap: .7rem; align-items: center; text-align: left; width: 100%; min-height: 44px; padding: .55rem .65rem; border: 0; border-radius: .2rem; background: transparent; color: var(--text); cursor: pointer; font: inherit; }
 .track-group button::before { content: ""; flex: none; width: .67rem; aspect-ratio: 1; background: currentColor; opacity: .66; clip-path: polygon(10% 0, 100% 50%, 10% 100%); }
 .track-group button:hover { background: #1f2d42; }
 .track-group button[aria-current] { color: var(--music-accent); background: #1e3747; }
 .track-group button[aria-current]::before { opacity: 1; }
-.track-download { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: .4rem .65rem; color: var(--music-accent); border: 1px solid var(--music-line); border-radius: .3rem; font: 700 .875rem/1.2 var(--display); }
+.track-credit { grid-area: credit; padding-inline-start: 2rem; color: var(--muted); font-size: .875rem; }
+.track-download { grid-area: download; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: .4rem .65rem; color: var(--music-accent); border: 1px solid var(--music-line); border-radius: .3rem; font: 700 .875rem/1.2 var(--display); }
 .track-download:hover { color: #0c2227; background: var(--music-accent); }
 
 @media (max-width: 950px) {
