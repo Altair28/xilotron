@@ -9,7 +9,7 @@ El juego|The game|Le jeu|Il gioco|Das Spiel|Quj|I deliach
 La película|The film|Le film|Il film|Der Film|much|I narn
 Música|Music|Musique|Musica|Musik|QoQ|Lind
 Idioma de la web|Website language|Langue du site|Lingua del sito|Sprache der Website|Daq Hol|Lam i deith
-Prealfa v0.14|Pre-alpha v0.14|Pré-alpha v0.14|Pre-alpha v0.14|Vorabversion v0.14|wa'DIch pat v0.14|Eriath v0.14
+Prealfa v0.16|Pre-alpha v0.16|Pré-alpha v0.16|Pre-alpha v0.16|Vorabversion v0.16|wa'DIch pat v0.16|Eriath v0.16
 Arcade espacial|Space arcade game|Arcade spatial|Arcade spaziale|Weltraum-Arcade|logh Quj|Teliach menel
 Cruza el espacio enemigo.|Cross enemy space.|Traversez l’espace ennemi.|Attraversa lo spazio nemico.|Durchquere feindlichen Raum.|jagh logh yIvegh.|Trevo ’wath in gŷd.
 Abre paso a través de su flota.|Fight your way through their fleet.|Frayez-vous un chemin à travers sa flotte.|Fatti strada attraverso la flotta nemica.|Kämpfe dich durch die feindliche Flotte.|jagh yo' yIghoS 'ej yISuv.|Dago trî i chuith in gŷd.
